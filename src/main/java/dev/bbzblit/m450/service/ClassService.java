@@ -3,8 +3,10 @@ package dev.bbzblit.m450.service;
 import dev.bbzblit.m450.model.SchoolClass;
 import dev.bbzblit.m450.repository.ClassRepository;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+@Service
 public class ClassService implements ParentService<SchoolClass, Long> {
 
     private final ClassRepository classRepository;

@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventRepository extends CrudRepository<SchoolEvent, Long> {
+
+    Iterable<SchoolEvent> findAllByClassIdId(Long classId);
+
 }

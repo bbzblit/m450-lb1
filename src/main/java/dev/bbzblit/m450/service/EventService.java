@@ -35,4 +35,8 @@ public class EventService implements ParentService<SchoolEvent, Long>{
         this.findById(id);
         this.eventRepository.deleteById(id);
     }
+
+    public Iterable<SchoolEvent> getAllEventsOfClass(Long classId) {
+        return this.eventRepository.findAllByClassIdId(classId);
+    }
 }
