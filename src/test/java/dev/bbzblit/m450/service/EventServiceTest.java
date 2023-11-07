@@ -40,7 +40,7 @@ public class EventServiceTest {
     public void testSave() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         SchoolEvent schoolEvent = new SchoolEvent();
         schoolEvent.setId(1L);
@@ -61,7 +61,7 @@ public class EventServiceTest {
     public void testFindById() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         SchoolEvent schoolEvent = new SchoolEvent();
         schoolEvent.setId(1L);
@@ -91,7 +91,7 @@ public class EventServiceTest {
     public void testFindAll() {
         SchoolClass schoolClass1 = new SchoolClass();
         schoolClass1.setId(1L);
-        schoolClass1.setName("Math");
+        schoolClass1.setName("INA 21-25");
 
         SchoolClass schoolClass2 = new SchoolClass();
         schoolClass2.setId(2L);
@@ -125,7 +125,7 @@ public class EventServiceTest {
     public void testDeleteById() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         SchoolEvent schoolEvent = new SchoolEvent();
         schoolEvent.setId(1L);
@@ -154,7 +154,7 @@ public class EventServiceTest {
     public void testGetAllEventsOfClass() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         SchoolEvent schoolEvent1 = new SchoolEvent();
         schoolEvent1.setId(1L);

@@ -41,7 +41,7 @@ public class ClassServiceTest {
     public void testSave() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         when(classRepository.save(schoolClass)).thenReturn(schoolClass);
 
@@ -55,7 +55,7 @@ public class ClassServiceTest {
     public void testFindById() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         when(classRepository.findById(1L)).thenReturn(Optional.of(schoolClass));
 
@@ -78,11 +78,11 @@ public class ClassServiceTest {
     public void testFindAll() {
         SchoolClass schoolClass1 = new SchoolClass();
         schoolClass1.setId(1L);
-        schoolClass1.setName("Math");
+        schoolClass1.setName("INA 21-25");
 
         SchoolClass schoolClass2 = new SchoolClass();
         schoolClass2.setId(2L);
-        schoolClass2.setName("Science");
+        schoolClass2.setName("INB 21-25");
 
         List<SchoolClass> schoolClasses = Arrays.asList(schoolClass1, schoolClass2);
 
@@ -98,7 +98,7 @@ public class ClassServiceTest {
     public void testDeleteById() {
         SchoolClass schoolClass = new SchoolClass();
         schoolClass.setId(1L);
-        schoolClass.setName("Math");
+        schoolClass.setName("INA 21-25");
 
         when(classRepository.findById(1L)).thenReturn(Optional.of(schoolClass));
 

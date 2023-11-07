@@ -54,11 +54,9 @@ public class StundenplanLoader {
                 } catch (ResponseStatusException ex) {
                     room = new SchoolRoom();
                     room.setName(content);
-                    room = this.roomService.save(room);
+                    room = this.roomService.save(room); // Saves Room
                 }
-                System.out.println(room);
-                System.out.println("><<<<<<<<<<<<<<<<<<<<<<");
-                event.setPlace(room);
+                event.setPlace(room); // Set Room to Event
             } else if (line.startsWith("SUMMARY:")) {
                 event.setTitle(content);
             } else if (line.startsWith("UID:")) {

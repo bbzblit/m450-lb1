@@ -145,6 +145,7 @@ public class StundenplanLoaderTest {
         schoolRoom.setName("P-14");
 
         when(classService.findById(1L)).thenReturn(schoolClass);
+        when(roomService.save(schoolRoom)).thenReturn(SchoolRoom.builder().id(1L).name("P-14").build());
         when(roomService.findByName("P-14")).thenThrow(new ResponseStatusException(HttpStatus.NOT_FOUND, "Room not found"));
 
         //Act
