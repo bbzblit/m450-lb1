@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 @Data
@@ -20,9 +22,9 @@ public class SchoolEvent {
     @GeneratedValue
     private Long id;
 
-    private ZonedDateTime appointmentStart;
+    private Instant appointmentStart;
 
-    private ZonedDateTime appointmentEnd;
+    private Instant appointmentEnd;
 
     @ManyToOne
     private SchoolClass classId;
