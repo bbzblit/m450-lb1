@@ -36,4 +36,12 @@ public class RoomService implements ParentService<SchoolRoom, Long>{
         this.roomRepository.deleteById(id);
     }
 
+    public SchoolRoom findByName(String name){
+        return this.roomRepository.findByName(name).orElseThrow(
+                () -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "No room with name " + name + " found."
+                )
+        );
+    }
+
 }
