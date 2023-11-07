@@ -115,4 +115,5 @@ public class ClassServiceTest {
             classService.deleteById(1L);
         });
     }
+
 }

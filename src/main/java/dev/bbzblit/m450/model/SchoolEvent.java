@@ -33,7 +33,8 @@ public class SchoolEvent {
 
     private String summary;
 
-    private String place;
+    @ManyToOne
+    private SchoolRoom place;
 
 
 

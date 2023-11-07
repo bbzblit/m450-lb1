@@ -2,7 +2,10 @@ package dev.bbzblit.m450.service;
 
 import dev.bbzblit.m450.model.SchoolEvent;
 import dev.bbzblit.m450.repository.EventRepository;
+
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class EventService implements ParentService<SchoolEvent, Long>{
@@ -21,7 +24,7 @@ public class EventService implements ParentService<SchoolEvent, Long>{
     @Override
     public SchoolEvent findById(Long id) {
         return this.eventRepository.findById(id).orElseThrow(
-                () -> new RuntimeException("Event with id " + id + " not found")
+                () -> new ResponseStatusException(HttpStatusCode.valueOf(404), "No event with id " + id + " found.")
         );
     }
 
